@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from 'react';
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import {DeliveryContext} from './helpers';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+// Components
+import DeliveryListings from "./components/DeliveryListings";
+import DeliveryDetails from "./components/DeliveryDetails"
+import ErrorPage from './components/ErrorPage';
+
+
+const App = () => {
+  const initial = localStorage.getItem("currentId")
+    ? localStorage.getItem("currentId")
+    : -1;
+  const [deliveryId, setDeliveryId] = useState(initial);
+
+    return (
+      <DeliveryContext.Provider value={{ deliveryId, setDeliveryId }}>
+        <Router>
+          <Routes>
+            <Route path="/" element={<DeliveryListings />} />
+            <Route path="/deliveries/:id" element={<DeliveryDetails />} />
+            <Route path="/*" element={<ErrorPage />} />
+          </Routes>
+        </Router>
+      </DeliveryContext.Provider>
+    );
 }
 
 export default App;
