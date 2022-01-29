@@ -2,7 +2,7 @@
 
 ## Project Architecture
 
-![State Management Architecture] (redux-toolkit architecture.png)
+![State Management Architecture](redux-toolkit architecture.png)
 
 ## To-Do's (Suggested Features)
  - Integration tests
