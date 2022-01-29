@@ -1,7 +1,7 @@
 # Paack Driver App
 
 ## Project Architecture
-![State Management Architecture] (redux-toolkit architecture.png)
+![State Management Architecture] (redux-toolkit architecture.PNG)
 
 ## To-Do's (Suggested Features)
  - Integration tests
