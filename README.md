@@ -1,6 +1,7 @@
 # Paack Driver App
 
 ## Project Architecture
+
 ![State Management Architecture] (redux-toolkit architecture.png)
 
 ## To-Do's (Suggested Features)
