@@ -1,11 +1,11 @@
 # Paack Driver App
 
-## Project Architecture
-
-![State Management Architecture](redux-toolkit architecture.png)
+## State Mangement Architecture
+ - click on the redux-toolkit architecture.png file view.
 
 ## To-Do's (Suggested Features)
  - Integration tests
+ - Refactor code to React/TypeScript
  - Authentication for Drivers
  - Integrating Map view based on Delivery location
  - Custom Search by location for delivery listings 
